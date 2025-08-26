@@ -15,4 +15,20 @@ solicitados
 cada classe*/
 
 public class MateriaPrima {
+    private String nome;
+    private int quantidadeEmEstoque;
+    private String fornecedor;
+
+    public void adicionarEstoque(int quantidade){
+        quantidadeEmEstoque += quantidade;
+    }
+    public void retirarEstoque(int quantidade){
+        quantidadeEmEstoque -= quantidade;
+    }
+    public void verificarResposicaoEstoque(){
+        if (quantidadeEmEstoque < 100){
+            System.out.println("Produto com estoque baixo.");
+        }
+    }
 }
+
